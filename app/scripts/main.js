@@ -78,57 +78,57 @@
 // INSTANCES
 
   // User
-  var brutus = new Goody ({
-    name: 'Brutus'
+  var shinobi = new Goody ({
+    name: 'Shinobi'
 
   });
 
-  var titus = new Goody ({
-    name: 'Titus',
+  var haku = new Goody ({
+    name: 'Haku',
     healthMax: 200
 
   });
 
 
-  var zuchius = new Goody ({
-    name: 'Zuchius',
+  var ryu = new Goody ({
+    name: 'Ryu',
     healthMax: 300
 
   });
 
 
   // Computer
-  var zeus = new Baddy ({
-    name: 'Zeus'
+  var akemi = new Baddy ({
+    name: 'Akemi'
 
   });
 
-  var hercules = new Baddy ({
-    name: 'Hercules',
+  var yoshiro = new Baddy ({
+    name: 'Yoshiro',
     healthMax: 500
 
   });
 
-  var maximus = new Baddy ({
-    name: 'Maximus',
+  var takashi = new Baddy ({
+    name: 'Takashi',
     healthMax: 1000
 
   });
 
 
   // Weapons
-  var spear = new Weapon ({
-    name: 'Spear'
+  var knife = new Weapon ({
+    name: 'Knife'
 
   });
 
-  var axe = new Weapon ({
-    name: 'Spear'
+  var nunchucks = new Weapon ({
+    name: 'Nunchucks'
 
   });
 
-  var sword = new Weapon ({
-    name: 'Spear'
+  var magic = new Weapon ({
+    name: 'Magic'
 
   });
 
