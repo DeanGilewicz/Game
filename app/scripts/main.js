@@ -23,10 +23,10 @@
     //   inst.currentHealth = inst.currentHealth - (_.random(10,20));
     // }
 
-    this.healthBoost = Boost;
     this.take = function(inst) {
       inst.currentHealth = inst.currentHealth + inst.healthBoost;
     }
+
   };
 
   // Computer
@@ -50,11 +50,11 @@
     //   inst.currentHealth = inst.currentHealth - (_.random(10,20));
     // }
     this.take = function(inst) {
-      inst.currentHealth = inst.currentHealth + juice;
+      this.currentHealth = this.currentHealth + inst.healthBoost; // instance of Goody.currentHealth = instance of Goody.currentHealth + instance of Boost.healthBoost
     }
   };
 
-
+  console.log(inst.healthBoost);
 
 
 
@@ -118,17 +118,17 @@
 
   // Weapons
   var spear = new Weapon ({
-    name: 'Spear',
+    name: 'Spear'
 
   });
 
   var axe = new Weapon ({
-    name: 'Spear',
+    name: 'Spear'
 
   });
 
   var sword = new Weapon ({
-    name: 'Spear',
+    name: 'Spear'
 
   });
 
@@ -136,15 +136,16 @@
   // Boost
   var juice = new Boost ({
     name: 'Juice',
+    healthBoost: 50
 
   });
 
   var powder = new Boost ({
-    name: 'Powder',
+    name: 'Powder'
 
   });
 
   var herbal = new Boost ({
-    name: 'herbal',
+    name: 'herbal'
 
   });
