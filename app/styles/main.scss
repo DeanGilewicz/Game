@@ -7,27 +7,48 @@ body {
   background-color: black;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 62.5%;
+  color: white;
 }
 
-.header {
-  background-color: red;
 
-  h1 {
-    font-size: 60px;
-    color: white;
-    text-align: center;
-  }
+h1 {
+  text-align: center;
+  background-color: red;
+  font-size: 60px;
 }
 
 .mainCon {
-  width: 80%;
-  margin: 0 auto;
-  padding: 60px;
-  background-image: url('../images/background2.gif');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  font-size: 1.8em;
-  // font-weight: 200;
-  // line-height: 30px;
-  color: white;
+  width: 100%;
+  overflow: auto;
+
+  .goodyBox {
+    float: left;
+    width: 15%;
+    border: 3px solid red;
+  }
+
+  .actionBox {
+    float: left;
+    width: 70%;
+    border: 3px solid red;
+    padding: 15% 0%;
+    // background-image: url('../images/background2.gif');
+    // background-repeat: no-repeat;
+    // background-size: 100%;
+    // background-position: center;
+    // font-size: 1.8em;
+    // font-weight: 200;
+    // line-height: 30px;
+    }
+
+    .baddyBox {
+      float: right;
+      width: 15%;
+      border: 3px solid red;
+    }
+}
+
+.footer {
+  background-color: red;
+  text-align: center;
 }
