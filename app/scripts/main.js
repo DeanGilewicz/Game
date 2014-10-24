@@ -4,25 +4,25 @@
 
   // User
   var Goody = function (options) {
-    var  attack_pt, special_pt;
+    var attack_pt, special_pt;
     var options = options || {};
     this.name = options.name;
     this.type = options.type;
     this.healthMax = options.healthMax || 100;
     this.currentHealth = this.healthMax;
-    this.healthBoost = options.healthBoost || (_.random(10,30));
+    // this.healthBoost = options.healthBoost || (_.random(10,30));
     switch (this.type) {
       case 1:
-        attack_pt = (_.random(5,20));
-        special_pt = (_.random(20,50));
+        attack_pt = _.random(5,20);
+        special_pt = _.random(20,50);
       break;
       case 2:
-        attack_pt = (_.random(10,30));
-        special_pt = (_.random(30,60));
+        attack_pt = _.random(10,30);
+        special_pt = _.random(30,60);
       break;
       case 3:
-        attack_pt = (_.random(15,40));
-        special_pt = (_.random(40,70));
+        attack_pt = _.random(15,40);
+        special_pt = _.random(40,70);
       break;
     };
     this.attack = function(attackee) {
@@ -39,10 +39,26 @@
 
   // Computer
   var Baddy = function(options) {
+    var attack_pt, special_pt;
     var options = options || {};
     this.name = options.name;
+    this.type = options.type;
     this.healthMax = options.healthMax || 100;
-    this.currentHealth = options.healthMax;
+    this.currentHealth = this.healthMax;
+    switch (this.type) {
+      case 4:
+        attack_pt = _.random(5,20);
+        special_pt = _.random(20,50);
+      break;
+      case 5:
+        attack_pt = _.random(10,30);
+        special_pt = _.random(30,60);
+      break;
+      case 6:
+        attack_pt = _.random(15,40);
+        special_pt = _.random(40,70);
+      break;
+    };
     this.attack = function(attackee) {
       return attackee.currentHealth = attackee.currentHealth - attack_pt; // attackee - is the enemy - Goody (instance)
     };
@@ -116,12 +132,12 @@ var shinobi,
     event.preventDefault();
 
     // User Instances
-    shinobi = new Goody ({ name: 'Shinobi'});
+    shinobi = new Goody ({ name: 'Shinobi', type: 1 });
     // haku = new Goody ({ name: 'Haku', healthMax: 200});
     // ryu = new Goody ({ name: 'Ryu', healthMax: 300});
 
     // Computer Instances
-    akemi = new Baddy ({ name: 'Akemi'});
+    akemi = new Baddy ({ name: 'Akemi', type: 4 });
     // yoshiro = new Baddy ({ name: 'Yoshiro', healthMax: 500});
     // takashi = new Baddy ({ name: 'Takashi', healthMax: 1000});
 
@@ -129,8 +145,8 @@ var shinobi,
 
 // Get ready to fight
     $('.welcome').fadeOut(500, function () {
-      $('.ggName').prepend(shinobi.name).find('.ggHealth').text(shinobi.health);
-      $('.bgName').prepend(akemi.name).find('.bgHealth').text(akemi.health);
+      $('.ggName').prepend(shinobi.name).find('.ggHealth').text(shinobi.currentHealth);
+      $('.bgName').prepend(akemi.name).find('.bgHealth').text(akemi.currentHealth);
       $('.fight').fadeIn();
     });
 
@@ -146,32 +162,36 @@ var shinobi,
 
   if (attack_type === 1) {
     shinobi.attack(akemi);
+    console.log("regular attack");
   } else {
     shinobi.special(akemi);
+    console.log("special attack");
   };
 
-  if (monster.health <= 0) {
-    $('.bgHealth').text(akemi.health);
+  if (akemi.currentHealth > 0) {
+    $('.bgHealth').text(akemi.currentHealth);
   } else {
-    ('.bgHealth').text('0');
-    $('.bgName').css('text-decoration', 'line-through',).css('color', 'red');
+    $('.bgHealth').text('0');
+    $('.bgName').css('text-decoration', 'line-through').css('color', 'red');
   };
 
   if (attack_type === 1) {
     akemi.attack(shinobi);
+    console.log("regular attack");
   } else {
     akemi.special(shinobi);
+    console.log("special attack");
   };
 
-  if (shinobi.health <= 0) {
-    $('.ggHealth').text(shinobi.health);
+  if (shinobi.currentHealth > 0) {
+    $('.ggHealth').text(shinobi.currentHealth);
   } else {
-    ('.ggHealth').text('0');
-    $('.ggName').css('text-decoration', 'line-through',).css('color', 'red');
+    $('.ggHealth').text('0');
+    $('.ggName').css('text-decoration', 'line-through').css('color', 'red');
   };
 
     // $('#fight').fadeOut();
 
-
+console.log(attack_type);
 
 });
