@@ -155,30 +155,41 @@ var shinobi,
 
 // FIGHT SEQUENCE
 
+
   $('#fight').on('click', function (event) {
     event.preventDefault();
 
   var attack_type = _.random(1, 4);
 
-  if (attack_type === 1) {
-    shinobi.attack(akemi);
-    console.log("regular attack");
-  } else {
-    shinobi.special(akemi);
-    console.log("special attack");
-  };
+    if (attack_type === 1) {
 
-  if (akemi.currentHealth > 0) {
-    $('.bgHealth').text(akemi.currentHealth);
-    $('.healthBar').css({'width': akemi.currentHealth + "%"});
-  } else {
-    $('.bgHealth').text('0');
-    $('.bgName').css('text-decoration', 'line-through').css('color', 'red');
-  };
+      shinobi.attack(akemi);
+      console.log("regular attack");
+    } else {
+      shinobi.special(akemi);
+      console.log("special attack");
+    };
+
+    if (akemi.currentHealth > 0) {
+      $('.bgHealth').text(akemi.currentHealth);
+    } else {
+      $('.bgHealth').text('0');
+      $('.bgName').css('text-decoration', 'line-through').css('color', 'red');
+      $('#fight').hide();
+    };
+
+    if (akemi.currentHealth >= 30 & akemi.currentHealth <= 60) {
+      $('.healthBar').css('width', akemi.currentHealth + "%").css('background-color', 'orange');
+    } else if (akemi.currentHealth >= 0 & akemi.currentHealth <= 29) {
+      $('.healthBar').css('width', akemi.currentHealth + "%").css('background-color', 'red');
+    } else {
+      $('.healthBar').css('width', akemi.currentHealth + "%").css('background-color', 'green');
+    };
+
 
   if (attack_type === 1) {
-    akemi.attack(shinobi);
-    $('.healthBar2').css({'width': shinobi.currentHealth + "%"});
+
+  akemi.attack(shinobi);
     console.log("regular attack");
   } else {
     akemi.special(shinobi);
@@ -190,9 +201,17 @@ var shinobi,
   } else {
     $('.ggHealth').text('0');
     $('.ggName').css('text-decoration', 'line-through').css('color', 'red');
+    $('#fight').hide();
   };
 
-    // $('#fight').fadeOut();
+
+  if (shinobi.currentHealth >= 30 & shinobi.currentHealth <= 60) {
+    $('.healthBar2').css('width', shinobi.currentHealth + "%").css('background-color', 'orange');
+  } else if (shinobi.currentHealth >= 0 & shinobi.currentHealth <= 29) {
+    $('.healthBar2').css('width', shinobi.currentHealth + "%").css('background-color', 'red');
+  } else {
+    $('.healthBar2').css('width', shinobi.currentHealth + "%").css('background-color', 'green');
+  };
 
 console.log(attack_type);
 
