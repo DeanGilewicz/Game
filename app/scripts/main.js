@@ -170,6 +170,7 @@ var shinobi,
 
   if (akemi.currentHealth > 0) {
     $('.bgHealth').text(akemi.currentHealth);
+    $('.healthBar').css({'width': akemi.currentHealth + "%"});
   } else {
     $('.bgHealth').text('0');
     $('.bgName').css('text-decoration', 'line-through').css('color', 'red');
@@ -177,6 +178,7 @@ var shinobi,
 
   if (attack_type === 1) {
     akemi.attack(shinobi);
+    $('.healthBar2').css({'width': shinobi.currentHealth + "%"});
     console.log("regular attack");
   } else {
     akemi.special(shinobi);
