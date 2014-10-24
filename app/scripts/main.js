@@ -29,7 +29,7 @@
       return attackee.currentHealth = attackee.currentHealth - attack_pt; // attackee - is the enemy - Baddy (instance)
     };
     this.special = function (attackee) {
-      return attackee.health = attackee.health - special_pt;
+      return attackee.currentHealth = attackee.currentHealth - special_pt;
     };
     // this.take = function(attackee) {
     //   attackee.currentHealth = attackee.currentHealth + attackee.healthBoost;
@@ -63,7 +63,7 @@
       return attackee.currentHealth = attackee.currentHealth - attack_pt; // attackee - is the enemy - Goody (instance)
     };
     this.special = function (attackee) {
-      return attackee.health = attackee.health - special_pt;
+      return attackee.currentHealth = attackee.currentHealth - special_pt;
     };
 
   };
@@ -159,15 +159,16 @@ var shinobi,
   $('#fight').on('click', function (event) {
     event.preventDefault();
 
-  var attack_type = _.random(1, 4);
+  var attack_type = _.random(1, 3);
 
     if (attack_type === 1) {
-
       shinobi.attack(akemi);
-      console.log("regular attack");
-    } else {
+      console.log("reguler attack");
+    } else if (attack_type === 2) {
       shinobi.special(akemi);
       console.log("special attack");
+    } else {
+        console.log("Miss");
     };
 
     if (akemi.currentHealth > 0) {
@@ -188,12 +189,11 @@ var shinobi,
 
 
   if (attack_type === 1) {
-
-  akemi.attack(shinobi);
-    console.log("regular attack");
-  } else {
+    akemi.attack(shinobi);
+  } else if (attack_type === 2) {
     akemi.special(shinobi);
-    console.log("special attack");
+  } else {
+    console.log("Miss");
   };
 
   if (shinobi.currentHealth > 0) {
@@ -213,6 +213,5 @@ var shinobi,
     $('.healthBar2').css('width', shinobi.currentHealth + "%").css('background-color', 'green');
   };
 
-console.log(attack_type);
 
 });
