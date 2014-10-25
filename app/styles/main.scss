@@ -68,19 +68,30 @@ h1 {
   width: 100%;
   overflow: auto;
 
-  .welcome {
-    margin: 0 auto;
-    border: 1px solid red;
-    width: 50%;
-    text-align: center;
-    padding: 10%;
-  }
-
   .goodyBox {
     float: left;
     width: 15%;
     border: 3px solid red;
     display: none;
+  }
+
+  .baddyBox {
+    float: right;
+    width: 15%;
+    border: 3px solid red;
+    display: none;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .welcome {
+    margin: 40px auto;
+    border: 1px solid red;
+    width: 50%;
+    text-align: center;
+    padding: 10%;
   }
 
   .fight_scene {
@@ -109,14 +120,6 @@ h1 {
       }
     }
   }
-
-  .baddyBox {
-    float: right;
-    width: 15%;
-    border: 3px solid red;
-    display: none;
-  }
-
 }
 
 .footer {

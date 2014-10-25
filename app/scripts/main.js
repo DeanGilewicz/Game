@@ -126,6 +126,8 @@
 
     $('.intro').fadeOut(500);
     $('.mainCon').fadeIn(2000);
+    $('.goodyBox').fadeIn(1000);
+    $('.baddyBox').fadeIn(1000);
 
   });
 
