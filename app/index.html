@@ -14,6 +14,7 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/animate.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -24,12 +25,12 @@
   <body>
 
     <div class="header">
-      <h1>The Arena</h1>
+      <h1><span class="the">The </span><span class="arena">Arena</span></h1>
 
     </div>
 
     <div class="intro">
-      <p>In a time where Gov X controls the freedom of all people in Qur, there is only one hope. Having been taken in by Liu Kan as a child and taught the ancient fighting techniques of Hokra, now is the time to fufill your destiny and defeat Gov x once and for all. The only thing standing in your way is The Arena. The most fierest Gov X warriors await to do battle in a fight till the death! Will you survive the most deadliest place in Qur and win freedom for all...only time will tell..  </p>
+      <p class="tlt">In a time <!-- where Gov X controls the freedom of all people in Qur, there is only one hope. Having been taken in by Liu Kan as a child and taught the ancient fighting techniques of Hokra, now is the time to fufill your destiny and defeat Gov x once and for all. The only thing standing in your way is The Arena. The most fiercest Gov X warriors await to do battle in a fight till the death! Will you survive the most deadliest place in Qur and win freedom for all...only time will tell.. --> </p>
       <button name="begin" class="begin">Start Game</button>
     </div>
 
@@ -42,7 +43,7 @@
 
       <div class="baddyBox">
         <span>Baddy Character Area</span>
-        <img src="../images/ninja6.png" alt="image of Akemi" />
+        <img src="../images/Akemi.png" alt="image of Akemi" />
         <!-- iamge, name, type, health, -->
       </div>
 
@@ -88,7 +89,7 @@
     </div>
 
     <div class="footer">
-      <span>&copy; The Arena</span>
+      <span class="foot">&copy; The Arena</span>
     </div>
 
     <!-- build:js scripts/vendor.js -->
@@ -99,6 +100,8 @@
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+        <script src="scripts/jquerylettering.js"></script>
+        <script src="scripts/textillate.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

@@ -121,6 +121,20 @@
   // });
 
   // INTRO SCREEN - story and start game button when clicked goes to pick character
+  $('.the').addClass('animated bounceInLeft');
+  $('.arena').addClass('animated bounceInRight');
+  $('.foot').addClass('animated fadeInUp');
+
+  $(function () {
+    $('.tlt').textillate( { initialDelay: 4500, in: {
+      effect: 'fadeInUpBig',
+      delayScale: 2,
+      callback: function () {
+      $('.begin').fadeIn(2000).css('display', 'block');
+    }}});
+  });
+
+  // when start game button is clicked then into box fades out
   $('.intro button').on('click', function(event) {
     event.preventDefault();
 
