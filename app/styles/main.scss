@@ -10,16 +10,59 @@ body {
   color: white;
 }
 
+.header {
+  width: 100%;
+  background-color: red;
+}
 
 h1 {
   text-align: center;
-  background-color: red;
-  font-size: 60px;
+  font-size: 6em;
+  animation-duration: 3s;
+  animation-name: topDown;
+  animation-timing-function: ease-in;
 }
+
+@keyframes topDown {
+  from {
+    margin-top: -8%;
+    width: 100%;
+  }
+   to {
+    margin-top: 0%;
+    width: 100%;
+  }
+  50% {
+  font-size: 200%;
+  }
+}
+
 
 .intro {
   width: 100%;
+
+  p {
+    padding: 2%;
+    font-size: 1.7em;
+    text-align: center;
+    margin: 80px auto;
+  }
+
+  button {
+    display: block;
+    margin: 60px auto;
+    padding: 1% 2% 1% 2%;
+    border-radius: 10%;
+    background-color: red;
+    font-size: 1.5em;
+    color: white;
+
+    &:hover {
+      background-color: darkred;
+    }
+  }
 }
+
 
 .mainCon {
   width: 100%;
@@ -79,6 +122,9 @@ h1 {
 .footer {
   background-color: red;
   text-align: center;
+  font-size: 1.5em;
+  margin-top: 100px;
+  padding: 10px 0px;
 }
 
 
