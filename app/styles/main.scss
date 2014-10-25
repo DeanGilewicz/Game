@@ -1,4 +1,4 @@
- // Bourbon & Neat
+// Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
@@ -21,6 +21,18 @@ h1 {
   width: 100%;
   overflow: auto;
 
+  .welcome {
+    margin: 0 auto;
+    border: 1px solid red;
+    width: 50%;
+    text-align: center;
+    padding: 10%;
+  }
+
+  button {
+    color: black;
+  }
+
   .goodyBox {
     float: left;
     width: 15%;
@@ -28,19 +40,7 @@ h1 {
     display: none;
   }
 
-  .welcome {
-    margin: 0 auto;
-    border: 1px solid red;
-    width: 50%;
-    text-align: center;
-    padding: 10%;
-
-    button {
-      color: black;
-    }
-}
-
-  .fight {
+  .fight_scene {
     float: left;
     width: 70%;
     border: 3px solid red;
@@ -53,7 +53,19 @@ h1 {
     // font-size: 1.8em;
     // font-weight: 200;
     // line-height: 30px;
+
+    .healthCon {
+      width: 300px;
+      height: 30px;
+      border: 1px solid red;
+
+      .healthBar, .healthBar2 {
+        height: 30px;
+        width: 100%;
+        background-color: green;
+      }
     }
+  }
 
   .baddyBox {
     float: right;
@@ -69,14 +81,8 @@ h1 {
   text-align: center;
 }
 
-.healthCon {
-  width: 300px;
-  height: 30px;
-  border: 1px solid red;
-}
 
-.healthBar, .healthBar2 {
-  height: 30px;
-  width: 100%;
-  background-color: green;
+.win_fight, .lose_fight {
+  display: none;
+  text-align: center;
 }
