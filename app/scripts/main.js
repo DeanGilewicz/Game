@@ -121,8 +121,20 @@
   //   name: 'herbal'
 
   // });
-  // STARTING THE GAME
 
+  // INTRO SCREEN - story and start game button when clicked goes to pick character
+  $('.intro button').on('click', function(event) {
+    event.preventDefault();
+
+    console.log("button clicked");
+
+    $('.intro').fadeOut(500);
+    $('.mainCon').fadeIn(2000);
+
+  });
+
+
+  // STARTING THE GAME - pick character
   var user, computer;
 
   $('.player_select button').on('click', function(event) {
@@ -182,8 +194,7 @@
   });
 
 
-// FIGHT SEQUENCE
-
+// FIGHT SEQUENCE - fight scene. Click attack button to fight
 
   $('#fightBtn').on('click', function (event) {
     event.preventDefault();
