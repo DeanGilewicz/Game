@@ -201,7 +201,9 @@
     $('.goodyBox').fadeIn(1000);
     $('.baddyBox').fadeIn(1000);
 
+
   });
+
 
 
 // FIGHT SEQUENCE - fight scene. Click attack button to fight

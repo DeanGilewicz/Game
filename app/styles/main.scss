@@ -77,22 +77,47 @@ h1 {
     width: 15%;
     border: 3px solid red;
     display: none;
-
-    img {
-      width: 100px;
-    }
   }
 
   .welcome {
     margin: 40px auto;
     border: 1px solid red;
-    width: 50%;
+    width: 90%;
     text-align: center;
-    padding: 10%;
+
+    .player_select, .opponent_select {
+      float: left;
+      width: 100%;
+      border: 1px solid green;
+    }
+
+    h3 {
+      font-size: 3em;
+    }
+
+    .ps {
+      border: 1px solid red;
+      display: inline-block;
+      width: 25%;
+    }
+
+    .mid {
+      margin: 0px 40px;
+    }
+
+    img {
+      width: 60%;
+      display: block;
+      margin: 0 auto;
+      border: 1px solid blue;
+    }
 
     button {
+      width: 60%;
+      font-size: 2em;
       color: black;
     }
+
   }
 
   .fight_scene {
