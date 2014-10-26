@@ -147,17 +147,31 @@
   // STARTING THE GAME - pick character
   var user, computer;
 
+  user = new Goody ({
+    name: "not selected player"
+  });
+
+  computer = new Baddy ({
+    name: "not selected opponent"
+  });
+
+
   $('.player_select button').on('click', function(event) {
     event.preventDefault();
+    console.log("button clicked");
 
     var char_name = $(this).text(),
         char_type = $(this).attr('name');
+    console.log(char_name);
+    console.log(char_type);
 
     // Create instance of goody
     user = new Goody ({
       name: char_name,
       type: char_type
     });
+    console.log(user.name);
+    console.log(user.type);
 
     // shinobi = new Goody ({ name: 'Shinobi'});
     // haku = new Goody ({ name: 'Haku', healthMax: 200});
@@ -169,12 +183,16 @@
 
     var char_name = $(this).text(),
         char_type = $(this).attr('name');
+        console.log(char_name);
+        console.log(char_type);
 
     // Create instance of baddy
     computer = new Baddy ({
       name: char_name,
       type: char_type
     });
+    console.log(computer.name);
+    console.log(computer.type);
 
     // akemi = new Goody ({ name: 'Akemi'});
     // yoshiro = new Baddy ({ name: 'Yoshiro', healthMax: 500});
@@ -182,25 +200,34 @@
   });
 
 
-  // GET READY TO FIGHT - make sure 1 character and 1 opponent is selected
+  // GET READY TO FIGHT
   $('.start').on('click', function(event) {
     event.preventDefault();
 
-    if(user.name === user.name && computer.name === computer.name) {
+    // check to make sure 1 character and 1 opponent is selected
+    if(user.name == "not selected player" && computer.name == "not selected opponent") {
 
-      $('.welcome').fadeOut(500, function () {
-        $('.ggName').prepend(user.name).find('.ggHealth').text(user.currentHealth);
-        $('.bgName').prepend(computer.name).find('.bgHealth').text(computer.currentHealth);
+      alert("You Must Select A Player And An Opponent");
 
-        $('.fight_scene').fadeIn();
-      });
-    } else if (user.name === false || computer.name === false ) {// else if (computer.chosen === true && user === undefined){
-        alert("You Must Select A Character And An Opponent");
+
+    } else if(user.name == "not selected player") {
+
+        alert("You Must Select A Player");
+
+    } else if(computer.name == "not selected opponent") {
+
+        alert("You Must Select An Opponent");
+    } else {
+        console.log("both charcters selected");
+        // $('.welcome').fadeOut(500, function () {
+        //   $('.ggName').prepend(user.name).find('.ggHealth').text(user.currentHealth);
+        //   $('.bgName').prepend(computer.name).find('.bgHealth').text(computer.currentHealth);
+        //
+        //   $('.fight_scene').fadeIn();
+        //   $('.goodyBox').fadeIn(1000);
+        //   $('.baddyBox').fadeIn(1000);
+        // });
     }
-
-    $('.goodyBox').fadeIn(1000);
-    $('.baddyBox').fadeIn(1000);
-
 
   });
 
