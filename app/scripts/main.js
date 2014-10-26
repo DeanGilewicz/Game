@@ -173,6 +173,9 @@
     console.log(user.name);
     console.log(user.type);
 
+    $('.player_select button').removeClass("char_select");
+    $(this).addClass('char_select');
+
     // shinobi = new Goody ({ name: 'Shinobi'});
     // haku = new Goody ({ name: 'Haku', healthMax: 200});
     // ryu = new Goody ({ name: 'Ryu', healthMax: 300});
@@ -193,6 +196,9 @@
     });
     console.log(computer.name);
     console.log(computer.type);
+
+    $('.opponent_select button').removeClass("char_select");
+    $(this).addClass('char_select');
 
     // akemi = new Goody ({ name: 'Akemi'});
     // yoshiro = new Baddy ({ name: 'Yoshiro', healthMax: 500});
