@@ -134,14 +134,12 @@
     }}});
   });
 
-  // when start game button is clicked then into box fades out
+  // when start game button is clicked then intro box fades out, and mainCon fades in
   $('.intro button').on('click', function(event) {
     event.preventDefault();
 
     $('.intro').fadeOut(500);
     $('.mainCon').fadeIn(2000);
-    $('.goodyBox').fadeIn(1000);
-    $('.baddyBox').fadeIn(1000);
 
   });
 
@@ -199,6 +197,9 @@
     } else if (user.name === false || computer.name === false ) {// else if (computer.chosen === true && user === undefined){
         alert("You Must Select A Character And An Opponent");
     }
+
+    $('.goodyBox').fadeIn(1000);
+    $('.baddyBox').fadeIn(1000);
 
   });
 
