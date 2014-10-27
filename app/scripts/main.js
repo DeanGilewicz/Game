@@ -6,6 +6,7 @@
     var options = options || {};
     this.name = options.name;
     this.type = options.type;
+    this.image = options.image;
     this.healthMax = options.healthMax;
     this.currentHealth = this.healthMax;
     switch (this.type) {
@@ -37,6 +38,7 @@
     var options = options || {};
     this.name = options.name;
     this.type = options.type;
+    this.image = options.image;
     this.healthMax = options.healthMax;
     this.currentHealth = this.healthMax;
     switch (this.type) {
@@ -124,18 +126,26 @@
     event.preventDefault();
 
     // Player name and type set by player_select button that is clicked
-    var char_name = $(this).data('name'),
+    var char_name = $(this).data('name');
         char_type = $(this).data('type');
-        char_img = $(this).data('img');
-        char_health = $(this).data('health');
+        char_image = $(this).data('img');
+        char_healthMax = $(this).data('health');
+        console.log(char_name);
+        console.log(char_type);
+        console.log(char_image);
+        console.log(char_healthMax);
 
     // Create instance of goody
     user = new Goody ({
       name: char_name,
       type: char_type,
-      img: char_img,
-      health: char_health
+      image: char_image,
+      healthMax: char_healthMax
     });
+    console.log(user.name);
+    console.log(user.type);
+    console.log(user.image);
+    console.log(user.healthMax);
 
     // player_select button that is clicked is highlighted
     $('.player_select button').removeClass("char_select");
@@ -151,18 +161,26 @@
     event.preventDefault();
 
     // Opponent name and type set by opponent_select button that is clicked
-    var char_name = $(this).data('name'),
+    var char_name = $(this).data('name');
         char_type = $(this).data('type');
-        char_img = $(this).data('img');
-        char_health = $(this).data('health');
+        char_image = $(this).data('img');
+        char_healthMax = $(this).data('health');
+        console.log(char_name);
+        console.log(char_type);
+        console.log(char_image);
+        console.log(char_healthMax);
 
     // Create instance of baddy
     computer = new Baddy ({
       name: char_name,
       type: char_type,
-      img: char_img,
-      health: char_health
+      image: char_image,
+      healthMax: char_healthMax
     });
+    console.log(computer.name);
+    console.log(computer.type);
+    console.log(computer.image);
+    console.log(computer.healthMax);
 
     // opponent_select button that is clicked is highlighted
     $('.opponent_select button').removeClass("char_select");
