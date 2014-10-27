@@ -128,10 +128,6 @@
         char_type = $(this).data('type');
         char_img = $(this).data('img');
         char_health = $(this).data('health');
-        console.log(char_name);
-        console.log(char_type);
-        console.log(char_img);
-        console.log(char_health);
 
     // Create instance of goody
     user = new Goody ({
@@ -159,10 +155,6 @@
         char_type = $(this).data('type');
         char_img = $(this).data('img');
         char_health = $(this).data('health');
-        console.log(char_name);
-        console.log(char_type);
-        console.log(char_img);
-        console.log(char_health);
 
     // Create instance of baddy
     computer = new Baddy ({
@@ -250,7 +242,7 @@
 
         $('.bgHealth').text(computer.currentHealth);
 
-    } else {
+    } else if(computer.currentHealth <= 0 && user.currentHealth > 0) {
 
         // if computer health is depleated then display 0, name in red, go to final screen
         $('.bgHealth').text('0');
@@ -258,6 +250,18 @@
         $('#fightBtn').hide();
         $('.fight_scene').fadeOut(1000);
         $('.win_fight').delay(1000).slideDown(4000);
+
+    } else {
+
+        // if both characters die at the same time then display different ending message
+        $('.ggHealth').text('0');
+        $('.bgHealth').text('0');
+        $('.ggName').css('color', 'red');
+        $('.bgName').css('color', 'red');
+        $('#fightBtn').hide();
+        $('.fight_scene').fadeOut(1000);
+        $('.dead_fight').delay(1000).slideDown(4000);
+
     };
 
     // health bar for user
@@ -295,7 +299,7 @@
 
         $('.ggHealth').text(user.currentHealth);
 
-    } else {
+    } else if(user.currentHealth <= 0 && computer.currentHealth > 0) {
 
         // if user health is depleated then display 0, name in red, go to final screen
         $('.ggHealth').text('0');
@@ -303,6 +307,17 @@
         $('#fightBtn').hide();
         $('.fight_scene').fadeOut(1000);
         $('.lose_fight').delay(1000).slideDown(4000);
+
+    } else {
+
+        // if both characters die at the same time then display different ending message
+        $('.ggHealth').text('0');
+        $('.bgHealth').text('0');
+        $('.ggName').css('color', 'red');
+        $('.bgName').css('color', 'red');
+        $('#fightBtn').hide();
+        $('.fight_scene').fadeOut(1000);
+        $('.dead_fight').delay(1000).slideDown(4000);
 
     };
 
@@ -321,17 +336,5 @@
         $('.healthBar').css('width', user.currentHealth + "%").css('background-color', 'green');
     };
 
-
-    // if both characters die at the same time then display different ending message
-    if (user.currentHealth <= 0 && computer.currentHealth <= 0) {
-
-        $('.ggHealth').text('0');
-        $('.bgHealth').text('0');
-        $('.ggName').css('color', 'red');
-        $('.bgName').css('color', 'red');
-        $('#fightBtn').hide();
-        $('.fight_scene').fadeOut(1000);
-        $('.dead_fight').delay(1000).slideDown(4000);
-    }
 
   });
