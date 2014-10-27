@@ -1,0 +1,132 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>The Arena</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+
+    <div class="header">
+      <h1><span class="the">The </span><span class="arena">Arena</span></h1>
+
+    </div>
+
+    <div class="intro">
+      <p class="tlt">In a time where Gov X controls the freedom of all people in Qur, there is only one hope. Having been taken in by Liu Kan as a child and taught the ancient fighting techniques of Hokra, now is the time to fufill your destiny and defeat Gov x once and for all. The only thing standing in your way is The Arena. The most fiercest Gov X warriors await to do battle in a fight till the death! Will you survive the most deadliest place in Qur and win freedom for all...only time will tell.. </p>
+      <button name="begin" class="begin">Start Game</button>
+    </div>
+
+    <div class="mainCon">
+
+      <div class="welcome">
+        <div class="player_select">
+          <h3>Choose Your Player</h3>
+            <div class="ps">
+              <button data-name="Shinobi" data-type="g1" data-img="../images/shinobi.png" data-health="100">
+                <img src="../images/shinobi.png" alt="image of Shinobi"/>
+                <span>Shinobi</span>
+              </button>
+            </div>
+            <div class="ps mid">
+              <button data-name="Haku" data-type="g2" data-img="../images/haku.png" data-health="200">
+                <img src="../images/haku.png" alt="image of Haku"/>
+                <span>Haku</span>
+              </button>
+            </div>
+            <div class="ps">
+              <button data-name="Ryu" data-type="g3" data-img="../images/ryu.png" data-health="300">
+                <img src="../images/ryu.png" alt="image of Ryu"/>
+                <span>Ryu</span>
+              </button>
+            </div>
+        </div>
+        <div class="opponent_select">
+          <h3>Choose Your Opponent</h3>
+            <div class="os">
+              <button data-name="Akemi" data-type="b1" data-img="../images/akemi.png" data-health="100">
+                <img src="../images/akemi.png" alt="image of Akemi"/>
+                <span>Akemi</span>
+              </button>
+            </div>
+            <div class="os mid">
+              <button data-name="Yoshiro" data-type="b2" data-img="../images/yoshiro.png" data-health="250">
+                <img src="../images/yoshiro.png" alt="image of Yoshiro"/>
+                <span>Yoshiro</span>
+              </button>
+            </div>
+            <div class="os">
+              <button data-name="Takashi" data-type="b3" data-img="../images/takashi.png" data-health="500">
+                <img src="../images/takashi.png" alt="image of Takashi"/>
+                <span>Takashi</span>
+              </button>
+            </div>
+        </div>
+        <div class="go">
+          <button class="start">Fight!</button>
+        </div>
+
+      </div> <!-- end of welcome section -->
+
+      <div class="fight_scene">
+
+        <div class="modal">
+          <p class="ggName"></p>
+          <p>Vs</p>
+          <p class="bgName"></p>
+          <p>FIGHT TO THE DEATH</p>
+        </div>
+
+        <div class="goodyBox">
+          <p class="ggName"></p>
+          <p>Health: <span class="ggHealth"></span></p>
+          <div class="healthCon">
+            <div class="healthBar"></div>
+          </div>
+        </div>
+
+        <div class="baddyBox">
+          <p class="bgName"></p>
+          <p>Health: <span class="bgHealth"></span></p>
+          <div class="healthCon">
+            <div class="healthBar2"></div>
+          </div>
+        </div>
+
+        <div class="action">
+          <p class="msgCon">Attack: <span class="p_att_msg"></span></p>
+          <p class="msgCon">Defense: <span class="o_att_msg"></span></p>
+          <button id="fightBtn">Attack <span class="bgName"></span></button>
+        </div>
+
+      </div>
+
+      <div class="win_fight">
+        <p class="winner">You Win! <span class="ggName"></span> has killed <span class="bgName"></span> and defeated Gov X.</p>
+      </div>
+      <div class="lose_fight">
+        <p class="loser">Game Over...You have been defeated by <span class="bgName"></span>.</p>
+      </div>
+      <div class="dead_fight">
+        <p class="tie">Game Over, No Survivors...<span class="ggName"></span> and <span class="bgName"></span> were both killed in The Arena!</p>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <span class="foot">&copy; The Arena</span>
+    </div>
+
+    <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/main.js"></script>
+</body>
+</html>
