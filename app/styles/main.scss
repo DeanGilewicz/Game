@@ -133,17 +133,17 @@ h1 {
 
   .fight_scene {
     overflow: auto;
-    padding: 2% 0%;
     display: none;
     background-image: url('../images/background2.gif');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: contain;
     background-position: center;
-    height: 300px;
+    height: 400px;
 
     .modal {
-      font-size: 3em;
+      font-size: 3.5em;
       font-weight: bold;
+      margin: 40px 0px -85px 0px;
       -webkit-animation-duration: 4s;
       -webkit-animation-delay: 3s;
       -webkit-animation-iteration-count: 1;
@@ -151,7 +151,8 @@ h1 {
 
     .goodyBox {
       float: left;
-      width: 40%;
+      width: 23%;
+      margin-left: 2%;
       font-size: 3.5em;
       font-weight: bold;
       display: none;
@@ -171,7 +172,8 @@ h1 {
 
     .baddyBox {
       float: right;
-      width: 40%;
+      width: 23%;
+      margin-right: 2%;
       font-size: 3.5em;
       font-weight: bold;
       display: none;
@@ -204,13 +206,16 @@ h1 {
     }
 
     .action {
+      margin: 0 auto;
+      width: 20%;
       display: none;
       -webkit-animation-duration: 3s;
       -webkit-animation-delay: 5s;
       -webkit-animation-iteration-count: 1;
 
       .msgCon {
-        font-size: 1em;
+        display: block;
+        font-size: 1.5em;
         font-weight: 800;
 
         span {
@@ -219,7 +224,7 @@ h1 {
       }
 
       #fightBtn {
-        margin-top: 55px;
+        margin-top: 10px;
         color: black;
         border: 1px solid white;
         font-size: 2em;

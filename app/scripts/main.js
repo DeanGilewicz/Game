@@ -130,10 +130,6 @@
         char_type = $(this).data('type');
         char_image = $(this).data('img');
         char_healthMax = $(this).data('health');
-        console.log(char_name);
-        console.log(char_type);
-        console.log(char_image);
-        console.log(char_healthMax);
 
     // Create instance of goody
     user = new Goody ({
@@ -142,18 +138,11 @@
       image: char_image,
       healthMax: char_healthMax
     });
-    console.log(user.name);
-    console.log(user.type);
-    console.log(user.image);
-    console.log(user.healthMax);
 
     // player_select button that is clicked is highlighted
     $('.player_select button').removeClass("char_select");
     $(this).addClass('char_select');
 
-    // shinobi = new Goody ({ name: 'Shinobi'});
-    // haku = new Goody ({ name: 'Haku', healthMax: 200});
-    // ryu = new Goody ({ name: 'Ryu', healthMax: 300});
   });
 
   // a new instance (opponent) is created based on the button that is clicked
@@ -165,10 +154,6 @@
         char_type = $(this).data('type');
         char_image = $(this).data('img');
         char_healthMax = $(this).data('health');
-        console.log(char_name);
-        console.log(char_type);
-        console.log(char_image);
-        console.log(char_healthMax);
 
     // Create instance of baddy
     computer = new Baddy ({
@@ -177,18 +162,11 @@
       image: char_image,
       healthMax: char_healthMax
     });
-    console.log(computer.name);
-    console.log(computer.type);
-    console.log(computer.image);
-    console.log(computer.healthMax);
 
     // opponent_select button that is clicked is highlighted
     $('.opponent_select button').removeClass("char_select");
     $(this).addClass('char_select');
 
-    // akemi = new Goody ({ name: 'Akemi'});
-    // yoshiro = new Baddy ({ name: 'Yoshiro', healthMax: 500});
-    // takashi = new Baddy ({ name: 'Takashi', healthMax: 1000});
   });
 
 
