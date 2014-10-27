@@ -283,11 +283,11 @@
     };
 
     // health bar for user
-    if (computer.currentHealth >= 30 & computer.currentHealth <= 60) {
+    if (computer.currentHealth >= computer.healthMax * 0.3 && computer.currentHealth <= computer.healthMax * 0.6) {
 
         $('.healthBar2').css('width', computer.currentHealth + "%").css('background-color', 'orange');
 
-    } else if (computer.currentHealth >= 0 & computer.currentHealth <= 29) {
+    } else if (computer.currentHealth >= 0 && computer.currentHealth <= computer.healthMax * 0.29) {
 
         $('.healthBar2').css('width', computer.currentHealth + "%").css('background-color', 'red');
 
@@ -341,11 +341,11 @@
 
 
     // health bar for user
-    if (user.currentHealth >= 30 & user.currentHealth <= 60) {
+    if (user.currentHealth >= user.healthMax * 0.3 && user.currentHealth <= user.healthMax * 0.6) {
 
         $('.healthBar').css('width', user.currentHealth + "%").css('background-color', 'orange');
 
-    } else if (user.currentHealth >= 0 & user.currentHealth <= 29) {
+    } else if (user.currentHealth >= 0 && user.currentHealth <= user.healthMax * 0.29) {
 
         $('.healthBar').css('width', user.currentHealth + "%").css('background-color', 'red');
 
