@@ -64,6 +64,8 @@ h1 {
 .mainCon {
   width: 100%;
   overflow: auto;
+  text-align: center;
+  display: none;
 
   .welcome {
     margin: 40px auto;
@@ -115,6 +117,11 @@ h1 {
       clear: both;
       padding: 60px 0px;
       font-size: 2em;
+
+      .start:hover {
+        background-color: darkred;
+        color: white;
+      }
     }
 
     .char_select {
@@ -126,35 +133,37 @@ h1 {
 
 
   .fight_scene {
+    overflow: auto;
     border: 3px solid red;
     padding: 2% 0%;
     display: none;
-    // background-image: url('../images/background2.gif');
-    // background-repeat: no-repeat;
-    // background-size: 100%;
-    // background-position: center;
-    // font-size: 1.8em;
-    // font-weight: 200;
-    // line-height: 30px;
-    height: 500px;
+    background-image: url('../images/background2.gif');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    // height: 500px;
 
     .modal {
-      border: 1px solid red;
       font-size: 3em;
+      font-weight: bold;
       -webkit-animation-duration: 4s;
-      -webkit-animation-delay: 4s;
+      -webkit-animation-delay: 3s;
       -webkit-animation-iteration-count: 1;
     }
 
     .goodyBox {
       float: left;
       width: 40%;
-      font-size: 2.5em;
-      border: 3px solid red;
+      font-size: 3.5em;
+      font-weight: bold;
       display: none;
       -webkit-animation-duration: 2s;
       -webkit-animation-delay: 5s;
       -webkit-animation-iteration-count: 1;
+
+      p {
+        margin: 10px auto;
+      }
 
       p:nth-child(2) {
         font-size: 0.6em;
@@ -165,12 +174,16 @@ h1 {
     .baddyBox {
       float: right;
       width: 40%;
-      font-size: 2.5em;
-      border: 3px solid red;
+      font-size: 3.5em;
+      font-weight: bold;
       display: none;
       -webkit-animation-duration: 2s;
       -webkit-animation-delay: 5s;
       -webkit-animation-iteration-count: 1;
+
+      p {
+        margin: 10px auto;
+      }
 
       p:nth-child(2) {
         font-size: 0.6em;
@@ -181,7 +194,7 @@ h1 {
       width: 300px;
       height: 30px;
       margin: 0 auto;
-      border: 1px solid red;
+      border: 3px solid white;
 
       .healthBar, .healthBar2 {
         height: 30px;
@@ -191,14 +204,27 @@ h1 {
 
     }
 
-    #fightBtn {
-      margin-top: 60px;
-      color: black;
-      font-size: 2em;
+    .action {
       display: none;
       -webkit-animation-duration: 3s;
       -webkit-animation-delay: 5s;
       -webkit-animation-iteration-count: 1;
+
+      .msgCon {
+        font-size: 1em;
+        font-weight: 800;
+
+        span {
+          font-weight: 200;
+        }
+      }
+
+      #fightBtn {
+        margin-top: 55px;
+        color: black;
+        border: 1px solid white;
+        font-size: 2em;
+      }
     }
   }
 }
@@ -218,7 +244,9 @@ h1 {
 }
 
 
-.mainCon, .win_fight, .lose_fight {
+.win_fight, .lose_fight, .dead_fight {
   display: none;
+  font-size: 2.4em;
   text-align: center;
+  height: 300px;
 }
