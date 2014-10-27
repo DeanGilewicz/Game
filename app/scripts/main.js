@@ -200,6 +200,7 @@
           $('.baddyBox').show().addClass('animated fadeInRight');
           $('.ggHealth').text(user.currentHealth);
           $('.bgHealth').text(computer.currentHealth);
+          $('#fightBtn').show().addClass('animated zoomIn');
 
       });
     }
