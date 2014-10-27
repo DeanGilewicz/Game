@@ -38,7 +38,7 @@
 
       <div class="welcome">
         <div class="player_select">
-          <h3>Choose Your Player</h3>
+          <h3>Choose Your Player</h3><!-- image, name, type, healthMax -->
             <div class="ps">
               <img src="../images/shinobi.png" alt="image of Shinobi"/>
               <button name="g1">Shinobi</button>
@@ -72,34 +72,35 @@
           <button class="start">Fight!</button>
         </div>
 
-
-        <div class="goodyBox">
-          <span>Goody Character Area</span>
-          <img src="../images/haku.png" alt="image of Haku"/>
-          <!-- iamge, name, type, health, -->
-        </div>
-
-        <div class="baddyBox">
-          <span>Baddy Character Area</span>
-          <!-- image, name, type, health, -->
-        </div>
-
       </div> <!-- end of welcome section -->
 
       <div class="fight_scene">
-        <div class="healthCon">
-          <div class="healthBar">
+
+        <div class="modal">
+          <p class="ggName"></p>
+          <p>Vs</p>
+          <p class="bgName"></p>
+          <p>Fight To The Death</p>
+        </div>
+
+        <div class="goodyBox">
+          <p class="ggName"></p>
+          <p>Health: <span class="ggHealth"></span></p>
+          <div class="healthCon">
+            <div class="healthBar"></div>
           </div>
         </div>
-        <div class="healthCon">
-          <div class="healthBar2">
+
+        <div class="baddyBox">
+          <p class="bgName"></p>
+          <p>Health: <span class="bgHealth"></span></p>
+          <div class="healthCon">
+            <div class="healthBar2"></div>
           </div>
         </div>
-        <p>Fight To<span> The Death</span></p>
-        <p class="ggName"><span class="ggHealth"></span></p>
-        <p>Vs</p>
-        <p class="bgName"><span class="bgHealth"></span></p>
+
         <button id="fightBtn">Attack <span class="bgName"></span></button>
+
       </div>
 
       <div class="win_fight">

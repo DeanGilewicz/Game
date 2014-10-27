@@ -8,7 +8,6 @@
     this.type = options.type;
     this.healthMax = options.healthMax || 100;
     this.currentHealth = this.healthMax;
-    // this.healthBoost = options.healthBoost || (_.random(10,30));
     switch (this.type) {
       case "g1":
         reg_att = _.random(3,8);
@@ -29,9 +28,6 @@
     this.special = function (attackee) {
       return attackee.currentHealth = attackee.currentHealth - special_att;
     };
-    // this.take = function(attackee) {
-    //   attackee.currentHealth = attackee.currentHealth + attackee.healthBoost;
-    // };
 
   };
 
@@ -66,59 +62,27 @@
 
   };
 
-
-
-
-  // // Weapons - extra damaage to health or shield
-  // var Weapon = function (options) {
-  //   var options = options || {};
-  //   this.name = options.name;
-  // };
-  //
-  // // Boost - health or energy
-  // var Boost = function (options) {
+  // Constructor - Items
+  // Weapons and healthboost
+  // var Items = function (options) {
+  //   var weapon_att
   //   var options = options || {};
   //   this.name = options.name;
   //   this.healthBoost = options.healthBoost || (_.random(20,30));
+  //   this.weapons = options.weapons;
+  //   switch (this.weapons) {
+  //     case "knife":
+  //       weapon_att = _.random(3,8);
+  //     break;
+  //     case "nunchucks":
+  //       weapon_att = _.random(13,16);
+  //     break;
+  //     case "magic":
+  //       weapon_att = _.random(17,20);
+  //     break;
+  //   };
   // };
 
-
-
-
-
-  // Weapons
-  // var knife = new Weapon ({
-  //   name: 'Knife'
-  //
-  // });
-  //
-  // var nunchucks = new Weapon ({
-  //   name: 'Nunchucks'
-  //
-  // });
-  //
-  // var magic = new Weapon ({
-  //   name: 'Magic'
-  //
-  // });
-  //
-  // //
-  // // Boost
-  // var juice = new Boost ({
-  //   name: 'Juice',
-  //   healthBoost: 50
-  //
-  // });
-  //
-  // var powder = new Boost ({
-  //   name: 'Powder'
-  //
-  // });
-  //
-  // var herbal = new Boost ({
-  //   name: 'herbal'
-
-  // });
 
   // INTRO SCREEN - story and start game button when clicked goes to pick character
   $('.the').addClass('animated bounceInLeft');
@@ -225,16 +189,20 @@
         alert("You Must Select An Opponent");
     } else {
         console.log("both charcters selected");
-        // $('.welcome').fadeOut(500, function () {
-        //   $('.ggName').prepend(user.name).find('.ggHealth').text(user.currentHealth);
-        //   $('.bgName').prepend(computer.name).find('.bgHealth').text(computer.currentHealth);
-        //
-        //   $('.fight_scene').fadeIn();
-        //   $('.goodyBox').fadeIn(1000);
-        //   $('.baddyBox').fadeIn(1000);
-        // });
-    }
+        $('.welcome').fadeOut(500, function () {
+          $('.ggName').prepend(user.name).find('.ggHealth').text(user.currentHealth);
+          $('.bgName').prepend(computer.name).find('.bgHealth').text(computer.currentHealth);
 
+          $('.fight_scene').fadeIn(500);
+          $('.modal').addClass('animated zoomOut');
+
+          $('.goodyBox').show().addClass('animated fadeInLeft');
+          $('.baddyBox').show().addClass('animated fadeInRight');
+          $('.ggHealth').text(user.currentHealth);
+          $('.bgHealth').text(computer.currentHealth);
+
+      });
+    }
   });
 
 
