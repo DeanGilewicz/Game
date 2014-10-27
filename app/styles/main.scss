@@ -36,7 +36,7 @@ h1 {
 
 .intro {
   width: 100%;
-  height: 300px;
+  height: 400px;
 
   p {
     padding: 2%;
@@ -68,55 +68,51 @@ h1 {
   display: none;
 
   .welcome {
-    margin: 40px auto;
-    border: 1px solid red;
-    width: 90%;
+    overflow: auto;
+    margin: 0px auto;
+    width: 100%;
     text-align: center;
 
     .player_select, .opponent_select {
       float: left;
-      width: 100%;
-      border: 1px solid green;
+      width: 50%;
+      overflow: auto;
     }
 
     h3 {
-      font-size: 2.2em;
+      font-size: 2.4em;
+      margin: 0px 0px 40px 0px;
     }
 
     .ps, .os {
-      border: 1px solid red;
       display: inline-block;
-      width: 25%;
+      width: 20%;
     }
 
     .mid {
-      margin: 0px 40px;
+      margin: 0px 3%;
     }
 
-    img {
-      width: 60%;
-      display: block;
-      margin: 0 auto;
-      border: 1px solid blue;
-    }
 
     button {
-      width: 60%;
-      font-size: 1.5em;
+      width: 100%;
+      font-size: 1.6em;
       color: black;
-    }
 
-    .vs {
-      clear: both;
-      display: block;
-      padding: 30px 0px;
-      font-size: 5em;
+      img {
+        width: 100%;
+        display: block;
+      }
     }
 
     .go {
       clear: both;
-      padding: 60px 0px;
-      font-size: 2em;
+      padding: 80px 0px 30px 0px;
+
+      .start {
+        width: 40%;
+        font-size: 2.8em;
+      }
 
       .start:hover {
         background-color: darkred;
@@ -134,14 +130,13 @@ h1 {
 
   .fight_scene {
     overflow: auto;
-    border: 3px solid red;
     padding: 2% 0%;
     display: none;
     background-image: url('../images/background2.gif');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    // height: 500px;
+    height: 300px;
 
     .modal {
       font-size: 3em;

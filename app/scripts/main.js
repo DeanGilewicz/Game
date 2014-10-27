@@ -6,7 +6,7 @@
     var options = options || {};
     this.name = options.name;
     this.type = options.type;
-    this.healthMax = options.healthMax || 100;
+    this.healthMax = options.healthMax;
     this.currentHealth = this.healthMax;
     switch (this.type) {
       case "g1":
@@ -37,7 +37,7 @@
     var options = options || {};
     this.name = options.name;
     this.type = options.type;
-    this.healthMax = options.healthMax || 100;
+    this.healthMax = options.healthMax;
     this.currentHealth = this.healthMax;
     switch (this.type) {
       case "b1":
@@ -124,13 +124,21 @@
     event.preventDefault();
 
     // Player name and type set by player_select button that is clicked
-    var char_name = $(this).text(),
-        char_type = $(this).attr('name');
+    var char_name = $(this).data('name'),
+        char_type = $(this).data('type');
+        char_img = $(this).data('img');
+        char_health = $(this).data('health');
+        console.log(char_name);
+        console.log(char_type);
+        console.log(char_img);
+        console.log(char_health);
 
     // Create instance of goody
     user = new Goody ({
       name: char_name,
-      type: char_type
+      type: char_type,
+      img: char_img,
+      health: char_health
     });
 
     // player_select button that is clicked is highlighted
@@ -147,13 +155,21 @@
     event.preventDefault();
 
     // Opponent name and type set by opponent_select button that is clicked
-    var char_name = $(this).text(),
-        char_type = $(this).attr('name');
+    var char_name = $(this).data('name'),
+        char_type = $(this).data('type');
+        char_img = $(this).data('img');
+        char_health = $(this).data('health');
+        console.log(char_name);
+        console.log(char_type);
+        console.log(char_img);
+        console.log(char_health);
 
     // Create instance of baddy
     computer = new Baddy ({
       name: char_name,
-      type: char_type
+      type: char_type,
+      img: char_img,
+      health: char_health
     });
 
     // opponent_select button that is clicked is highlighted
