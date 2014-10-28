@@ -144,7 +144,7 @@ h1 {
       font-size: 3.5em;
       font-weight: bold;
       margin: 40px 0px -85px 0px;
-      -webkit-animation-duration: 4s;
+      -webkit-animation-duration: 2s;
       -webkit-animation-delay: 3s;
       -webkit-animation-iteration-count: 1;
     }
@@ -157,14 +157,20 @@ h1 {
       font-weight: bold;
       display: none;
       -webkit-animation-duration: 2s;
-      -webkit-animation-delay: 5s;
+      -webkit-animation-delay: 6s;
       -webkit-animation-iteration-count: 1;
+
+      img {
+        border: 1px solid red;
+        width: 50%;
+      }
 
       p {
         margin: 10px auto;
       }
 
       p:nth-child(2) {
+        margin: 28px 0px;
         font-size: 0.6em;
       }
 
@@ -178,14 +184,20 @@ h1 {
       font-weight: bold;
       display: none;
       -webkit-animation-duration: 2s;
-      -webkit-animation-delay: 5s;
+      -webkit-animation-delay: 6s;
       -webkit-animation-iteration-count: 1;
+
+      img {
+        border: 1px solid red;
+        width: 50%;
+      }
 
       p {
         margin: 10px auto;
       }
 
       p:nth-child(2) {
+        margin: 28px 0px;
         font-size: 0.6em;
       }
     }
@@ -206,7 +218,7 @@ h1 {
     }
 
     .action {
-      margin: 0 auto;
+      margin: 288px auto 0px auto;
       width: 20%;
       display: none;
       -webkit-animation-duration: 3s;

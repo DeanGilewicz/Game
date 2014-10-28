@@ -202,7 +202,9 @@
           $('.bgImg').attr("src", computer.image);
 
           $('.fight_scene').fadeIn(500);
-          $('.modal').addClass('animated zoomOut');
+          $('.modal').addClass('animated zoomOut').one('webkitAnimationEnd', function(){
+            $(this).remove();
+          });
 
           $('.goodyBox').show().addClass('animated fadeInLeft');
           $('.baddyBox').show().addClass('animated fadeInRight');
@@ -211,6 +213,7 @@
           $('.action').show().addClass('animated zoomIn');
 
         });
+
     }
 
   });
