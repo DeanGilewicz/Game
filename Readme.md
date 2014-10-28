@@ -1,3 +1,15 @@
-## Yo, I'm a Readme
+## Game - The Arena
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+This is an interactive turn-based game that I created.
+
+To Use:
+* Clone my repo
+* Run npm install
+* Run bower install
+
+Libraries:
+* jQuery
+* Underscore
+
+Deployment:
+* Heroku
