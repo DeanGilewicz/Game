@@ -11,5 +11,5 @@ Libraries:
 * jQuery
 * Underscore
 
-Deployment:
-* Heroku - https://ancient-lake-2873.herokuapp.com
+Author:
+# Dean Gilewicz
