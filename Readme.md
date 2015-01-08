@@ -12,4 +12,4 @@ Libraries:
 * Underscore
 
 Author:
-# Dean Gilewicz
+* Dean Gilewicz
