@@ -322,6 +322,7 @@
         $('.bgName').css('color', 'red');
         $('#fightBtn').hide();
         $('.fight_scene').fadeOut(1000);
+        $('.win_fight').hide();
         $('.dead_fight').delay(1000).slideDown(4000);
 
     };

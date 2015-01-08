@@ -257,7 +257,7 @@
     in: {
       effect: 'fadeInLeftBig',
       delayScale: 1.5,
-      delay: 50,
+      delay: 30,
       sync: false,
       reverse: false,
       shuffle: false,
@@ -266,7 +266,7 @@
     out: {
       effect: 'hinge',
       delayScale: 1.5,
-      delay: 50,
+      delay: 30,
       sync: false,
       reverse: false,
       shuffle: false,
